@@ -1,0 +1,18 @@
+{%extends "buscar.html" %}
+<head>
+
+    </head>
+    <body>
+    <h1>
+    Biblioteca online
+    </h1>{% block content %}
+    <form action="insertar_revista" method="POST">{% csrf_token %}
+        <p>fecha_de_publicacion: <input type="text" name="fecha_de_publicacion"></p>
+        <p>autor: <input type="text" name="autor"></p>
+        <p>titulo <input type="text" name="titulo"> </p>
+        <p>link <input type="text" name="link"></p>
+        <input type="submit" value="Enviar">
+    
+        </form>
+        {% endblock %}
+        </html>

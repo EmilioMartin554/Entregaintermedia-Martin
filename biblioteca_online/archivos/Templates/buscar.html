@@ -1,0 +1,46 @@
+<html>
+<head>
+   
+<title>bibloteca online</title>
+</head>
+<body>
+    
+    <h1>
+    Biblioteca online
+
+</h1>{% block content %}
+<form action="buscar" method="POST">{% csrf_token %}
+    <p>Titulo: <input type="text" name="titulo"></p>
+    <input type="submit" value="Enviar">
+    </form>
+    {% if libros %}
+    {% for libro in libros %}
+        <li>{{libro.fecha_de_publicacion}}</li>
+        <li>{{libro.titulo}}</li>
+        <li>{{libro.autor}}</li>
+        <li>{{libro.link}}</li>
+        {% endfor %}
+        <li>tipo: libro</li>
+    {%endif%}
+    {%if revistas %}
+    {% for revista in revistas %}
+        <li>{{revista.fecha_de_publicacion}}</li>
+        <li>{{revista.autor}}</li>
+        <li>{{revista.titulo}}</li>
+        <li>{{revista.link}}</li>
+    {% endfor %}
+        <li>tipo: revista</li>
+    {%endif%}
+    {% if textos %}
+    {% for texto in textos %}
+        <li>{{texto.fecha_de_publicacion}}</li>
+        <li>{{texto.autor}}</li>
+        <li>{{texto.titulo}}</li>
+        <li>{{texto.link}}</li>
+        {% endfor %}
+        <li>tipo: texto</li>
+        {%endif%}
+    {% endblock %}
+    </body>
+    <h3>https://github.com/EmilioMartin554</h3>
+</html>
