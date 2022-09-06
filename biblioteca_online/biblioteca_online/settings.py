@@ -55,7 +55,7 @@ ROOT_URLCONF = 'biblioteca_online.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/EXO/Desktop/proyectosdjango/biblioteca_online/archivos/Templates'],
+        'DIRS': ['/biblioteca_online/archivos/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
